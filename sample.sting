@@ -1,0 +1,117 @@
+show('How to Print')
+show('Hello World')
+
+show()
+
+show('How to declare variables')
+str(name) = 'Byry'
+num(age) = 21
+bln(isStudent) = true
+show('Name : ', name)
+show('Age  : ', age)
+show('isStudent : ', isStudent)
+
+show()
+
+show('How to use user-input')
+str(name) = roi('Name : ')
+num(age) =  roi('Age  : ')
+bln(isStudent) = roi('Student? : ')
+show('Name : ', name)
+show('Age  : ', age)
+show('isStudent : ', isStudent)
+
+show()
+
+show('How to use arithmetic expression')
+num(a) = roi('Num1: ')
+num(b) = roi('Num2: ')
+num(sum) = a + b
+num(dif) = a - b
+num(prod) = a * b
+num(quot) = a / b
+num(mod) = a % b
+num(exp) = a ^ b
+show('Sum : ', sum)
+show('Dif : ', dif)
+show('Mul : ', prod)
+show('Div : ', quot)
+show('Mod : ', mod)
+show('Exp : ', exp)
+
+show()
+
+show('How to use comparisons')
+bln(isTrue) = true
+bln(isFalse) = false
+bln(and) = isTrue && isFalse
+bln(or) = isTrue || isFalse
+bln(not) = !isTrue
+show('AND : ', and)
+show('OR  : ', or)
+show('NOT : ', not)
+
+show()
+
+show('How to use conditional')
+num(age) = roi('Age : ')
+if(age >= 18):
+    show('You are an adult.')
+elseif(age >= 13):
+    show('You are a teenager.')
+elseif(age == 0):
+    show('No age.')
+else:
+    show('You are a child.') ||
+
+show()
+
+show('How to use loop')
+num(number) = 1
+loop(number <= 3):
+    show(number)
+    number = number + 1 ||
+
+show()
+
+show('How to use nested loop')
+num(i) = 0
+loop (i < 5):
+    num(j) = 0
+    loop (j < 5):
+	    show('i: ', i, ', j: ', j)
+	    j = j + 1 ||||
+    i = i + 1 ||
+
+show()
+
+show('Simple odd or even program')
+num(number) = roi('Enter a Number : ')
+if(number % 2 == 0):
+    show('Even')
+else:
+    show('Odd')||
+
+show()
+
+show('Calculator program')
+num(num1) = roi('Enter a Number  : ')
+str(op) = roi('Enter operation : ')
+num(num2) = roi('Enter a Number  : ')
+num(total) = 0
+if(op == '+'):
+    total = num1 + num2
+    show(total) ||
+elseif(op == '-'):
+    total = num1 - num2
+    show(total) ||
+elseif(op == '*'):
+    total = num1 * num2
+    show(total) ||
+elseif(op == '/'):
+    total = num1 / num2
+    show(total) ||
+else:
+    show(total) ||
+
+show('Program Finished')
