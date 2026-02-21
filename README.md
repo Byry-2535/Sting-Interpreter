@@ -1,145 +1,258 @@
 # Sting Interpreter
 
-## A beginner friendly interpreter based on Java
+## A Beginner-Friendly Interpreter Built with Java
 
-This Interpreter is our finals project in ProgLang Subject.<br>
-It uses Java but inspired by Python.
+**Sting Interpreter** is our final project for the Programming Languages subject.  
+It is built using Java and inspired by Python’s simplicity and readability.
 
-### Syntaxes/Keywords
-- Comment [ # This is a comment ]
-- print [ show() ]
-- pipe | [ statement/syntax seperator ]
-- douple pipe || [ end of statement, loop, conditions block (buggy) ]
-- conditional [ if(condition): values | elseif(condition): values | else: values || ]
-- while loop [ loop(condition): values || ]
-- comma , [ concatenation of variables and literals inside show() ]
-- user input [ roi() (return of input) ]
+---
 
-### Datatypes:
-1.  num (Integer, Float, Double, Long)
-2.  str (String, Character)
-3.  bln (Boolean)
+## 🔑 Syntax & Keywords
 
-### Operations/Arithmetic:
-1.  \+ addition
-2.  \- subtraction
-3.  \* multiplication
-4.  / division
-5.  % modulo
-6.  ^ exponent
-7.  ( left parenthesis
-8.  ) right parenthesis
-9.  = equals, assignment
+- **Comment** → `# This is a comment`
+- **Print** → `show()`
+- **Pipe (`|`)** → statement separator
+- **Double Pipe (`||`)** → end of statement, loop, or conditional block *(currently buggy)*
+- **Conditional**
+  ```
+  if(condition): values |
+  elseif(condition): values |
+  else: values ||
+  ```
+- **While Loop**
+  ```
+  loop(condition): values ||
+  ```
+- **Comma ( , )** → concatenates variables and literals inside `show()`
+- **User Input** → `roi()` (Return Of Input)
 
-### Comparisons:
-1. < less than
-2. \> greater than
-3. <= less than or equal to
-4. \>= greater than or equal to
-5. == is equals to
-6. != not equals to
-7. and &&
-8. or ||
-9. not !
+---
 
-## How to create a file
-Just create a .txt file and named it anything but the format is .sting. Also this is hardcoded so it need to manually change the path in the java code.
+## 📦 Data Types
 
-## Sample Code
-show('Hello World') # print statement <br>
-show()              # simple endline
+1. `num()` → Integer, Float, Double, Long  
+2. `str()` → String, Character  
+3. `bln()` → Boolean  
 
-### How to declare variables
-str(name) = 'Byry' <br>
-num(age) = 21 <br>
-bln(isStudent) = true <br>
-show('Name : ', name) <br>
-show('Age  : ', age) <br>
-show('isStudent : ', isStudent)
+---
 
-### How to use user-input
-str(name) = roi('Name : ') <br>
-num(age) =  roi('Age  : ') <br>
-show('Name : ', name) <br>
+## ➕ Arithmetic Operations
+
+| Operator | Description       |
+|----------|------------       |
+| `+`      | Addition          |
+| `-`      | Subtraction       |
+| `*`      | Multiplication    |
+| `/`      | Division          |
+| `%`      | Modulo            |
+| `^`      | Exponent          |
+| `(`      | Left parenthesis  |
+| `)`      | Right parenthesis |
+| `=`      | Assignment        |
+
+---
+
+## 🔎 Comparison & Logical Operators
+
+| Operator | Description           |
+|----------|------------           |
+| `<`      | Less than             |
+| `>`      | Greater than          |
+| `<=`     | Less than or equal    |
+| `>=`     | Greater than or equal |
+| `==`     | Equal to              |
+| `!=`     | Not equal             |
+| `&&`     | AND                   |
+| `\|\|`   | OR                    |
+| `!`      | NOT                   |
+
+---
+
+## 📁 How to Create a File
+
+1. Create a file with the `.sting` extension.  
+2. The file path is currently hardcoded in the Java source code.  
+   You must manually change the file path inside the Java program.
+
+---
+
+# 🧪 Sample Code
+
+```sting
+show('Hello World') # print statement
+show()              # prints a blank line
+```
+
+---
+
+## 🧾 Variable Declaration
+
+```sting
+str(name) = 'Byry'
+num(age) = 21
+bln(isStudent) = true
+
+show('Name : ', name)
 show('Age  : ', age)
+show('isStudent : ', isStudent)
+```
 
-### How to use arithmetic expression
-num(a) = roi('Num1: ') <br>
-num(b) = roi('Num2: ') <br>
-num(sum) = a + b <br>
-num(dif) = a - b <br>
-num(prod) = a * b <br>
-num(quot) = a / b <br>
-num(mod) = a % b <br>
-num(exp) = a ^ b <br>
-show('Sum : ', sum) <br>
-show('Dif : ', dif) <br>
-show('Mul : ', prod) <br>
-show('Div : ', quot) <br>
-show('Mod : ', mod) <br>
+---
+
+## ⌨️ User Input
+
+```sting
+str(name) = roi('Name : ')
+num(age) = roi('Age  : ')
+
+show('Name : ', name)
+show('Age  : ', age)
+```
+
+---
+
+## ➗ Arithmetic Expressions
+
+```sting
+num(a) = roi('Num1: ')
+num(b) = roi('Num2: ')
+
+num(sum) = a + b
+num(dif) = a - b
+num(prod) = a * b
+num(quot) = a / b
+num(mod) = a % b
+num(exp) = a ^ b
+
+show('Sum : ', sum)
+show('Dif : ', dif)
+show('Mul : ', prod)
+show('Div : ', quot)
+show('Mod : ', mod)
 show('Exp : ', exp)
+```
 
-### How to use comparisons
-bln(isTrue) = true <br>
-bln(isFalse) = false <br>
-bln(and) = isTrue && isFalse <br>
-bln(or) = isTrue || isFalse <br>
-bln(not) = !isTrue <br>
-show('AND : ', and) <br>
-show('OR  : ', or) <br>
-show('NOT : ', not)
+---
 
-### How to use conditional
-num(age) = roi('Age : ') <br>
-if(age >= 18): <br>
-    show('You are an adult.') <br>
-elseif(age >= 13): <br>
-    show('You are a teenager.') <br>
-elseif(age == 0): <br>
-    show('No age.') <br>
-else: <br>
+## 🔁 Comparisons
+
+```sting
+bln(isTrue) = true
+bln(isFalse) = false
+
+bln(andResult) = isTrue && isFalse
+bln(orResult) = isTrue || isFalse
+bln(notResult) = !isTrue
+
+show('AND : ', andResult)
+show('OR  : ', orResult)
+show('NOT : ', notResult)
+```
+
+---
+
+## 🔀 Conditional Statements
+
+```sting
+num(age) = roi('Age : ')
+
+if(age >= 18):
+    show('You are an adult.')
+
+elseif(age >= 13):
+    show('You are a teenager.')
+
+elseif(age == 0):
+    show('No age.')
+
+else:
     show('You are a child.') ||
+```
 
-### How to use loop
-num(number) = 1 <br>
-loop(number <= 3): <br>
-    show(number) <br>
+---
+
+## 🔄 Loop
+
+```sting
+num(number) = 1
+
+loop(number <= 3):
+    show(number)
     number = number + 1 ||
+```
 
-### How to use nested loop
-num(i) = 0 <br>
-loop (i < 5): <br>
-    num(j) = 0 <br>
-    loop (j < 5): <br>
-	    show('i: ', i, ', j: ', j) <br>
-	    j = j + 1 |||| <br>
+---
+
+## 🔁 Nested Loop
+
+```sting
+num(i) = 0
+
+loop(i < 5):
+    num(j) = 0
+
+    loop(j < 5):
+        show('i: ', i, ', j: ', j)
+        j = j + 1 ||
+
     i = i + 1 ||
+```
 
-## Simple Programs
+---
 
-### Simple odd or even
-num(number) = roi('Enter a Number : ') <br>
-if(number % 2 == 0): <br>
-    show('Even') <br>
-else: <br>
-    show('Odd')||
+# 🧩 Simple Programs
 
-### Simple Calculator
-num(num1) = roi('Enter a Number  : ') <br>
-str(op) = roi('Enter operation : ') <br>
-num(num2) = roi('Enter a Number  : ') <br>
-num(total) = 0 <br>
-if(op == '+'): <br>
-    total = num1 + num2 <br>
-    show(total) || <br>
-elseif(op == '-'): <br>
-    total = num1 - num2 <br>
-    show(total) || <br>
-elseif(op == '*'): <br>
-    total = num1 * num2 <br>
-    show(total) || <br>
-elseif(op == '/'): <br>
-    total = num1 / num2 <br>
-    show(total) || <br>
-else: <br>
+## 🔢 Odd or Even
+
+```sting
+num(number) = roi('Enter a Number : ')
+
+if(number % 2 == 0):
+    show('Even')
+
+else:
+    show('Odd') ||
+```
+
+---
+
+## 🧮 Simple Calculator
+
+```sting
+num(num1) = roi('Enter a Number  : ')
+str(op) = roi('Enter operation : ')
+num(num2) = roi('Enter a Number  : ')
+
+num(total) = 0
+
+if(op == '+'):
+    total = num1 + num2
     show(total) ||
+
+elseif(op == '-'):
+    total = num1 - num2
+    show(total) ||
+
+elseif(op == '*'):
+    total = num1 * num2
+    show(total) ||
+
+elseif(op == '/'):
+    total = num1 / num2
+    show(total) ||
+
+else:
+    show(total) ||
+```
+
+---
+
+# 📝 Notes
+
+- Tabs and spaces are not required but recommended for readability.
+- This interpreter is designed for beginners who are curious about programming.
+- Sting aims to be simple and easy to understand.
+
+---
+
+## ❤️ Thank you!
